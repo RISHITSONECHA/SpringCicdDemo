@@ -18,7 +18,7 @@ public class EmployeeController {
 	EmployeeService employeeService;
 	
 	@GetMapping
-    public List<Employee> getAllEmployees() {
+    public String getAllEmployees() {
         return employeeService.getAllEmployees();
     }
 	
@@ -26,7 +26,7 @@ public class EmployeeController {
     public String getEmployeeById() {
 
 //        if (employee != null) {
-            return "Employee"
+            return "Employee";
 //        } else {
 //            return ResponseEntity.notFound().build();
 //        }

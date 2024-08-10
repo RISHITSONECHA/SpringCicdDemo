@@ -17,10 +17,11 @@ public class EmployeeControllerDemo {
 	EmployeeService employeeService;
 	
 	@GetMapping
-    public List<Employee> getAllEmployees() {
+    public String getAllEmployees() {
         return employeeService.getAllEmployees();
     }
 	
+/*
 	@GetMapping("/{empId}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Integer empId) {
         Employee employee = employeeService.getEmployeeById(empId);
@@ -60,5 +61,6 @@ public class EmployeeControllerDemo {
         }
     }
 	
+*/
 
 }

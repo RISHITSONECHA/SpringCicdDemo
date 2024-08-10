@@ -15,7 +15,7 @@ public class EmployeeService {
 	EmployeeRepo employeeRepo;
 	
 	public String getAllEmployees() {
-        return "Employee"
+        return "Employee";
     }
 
     /*public Employee getEmployeeById(Integer empId) {
