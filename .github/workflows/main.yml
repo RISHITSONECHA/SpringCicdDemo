@@ -19,11 +19,14 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'zulu'  # You can also use 'zulu', 'adopt', etc.
-          java-version: '17'        # Specify your desired Java version
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Grant execute permission for Maven Wrapper
+        run: chmod +x ./mvnw  # This line makes the mvnw script executable
 
       - name: Build
-        run: ./mvnw clean install  # Replace with your build command (e.g., `./gradlew build` for Gradle)
+        run: ./mvnw clean install  # Now this command will execute without permission issues
 
       - name: Run Tests
-        run: ./mvnw test  # Replace with your test command (e.g., `./gradlew test` for Gradle)
+        run: ./mvnw test
