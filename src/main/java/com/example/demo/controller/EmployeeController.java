@@ -22,17 +22,17 @@ public class EmployeeController {
         return employeeService.getAllEmployees();
     }
 	
-	@GetMapping("/{empId}")
-    public ResponseEntity<Employee> getEmployeeById(@PathVariable Integer empId) {
-        Employee employee = employeeService.getEmployeeById(empId);
-        if (employee != null) {
-            return ResponseEntity.ok(employee);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+	@GetMapping
+    public String getEmployeeById() {
+
+//        if (employee != null) {
+            return "Employee"
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
     }
 	
-	@PostMapping
+	/*@PostMapping
     public ResponseEntity<Employee> createEmployee(@RequestBody Employee employee) {
         Employee createdEmployee = employeeService.createEmployee(employee);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdEmployee);
@@ -60,6 +60,6 @@ public class EmployeeController {
             return ResponseEntity.notFound().build();
         }
     }
-	
+	*/
 
 }

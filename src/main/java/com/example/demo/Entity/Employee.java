@@ -7,22 +7,22 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name="EMPLOYEE")
+//@Entity
+//@Table(name="EMPLOYEE")
 public class Employee {
 	
-	@Id
-	@Column(name = "EMPID")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@Id
+//	@Column(name = "EMPID")
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer empID;
 	
-	@Column(name = "EMPNAME")
+//	@Column(name = "EMPNAME")
 	private String empName;
 	
-	@Column(name = "EMPAGE")
+//	@Column(name = "EMPAGE")
 	private String empAge;
 	
-	@Column(name = "EMPSALARY")
+//	@Column(name = "EMPSALARY")
 	private String empSalary;
 	
 	public Employee(Integer empID, String empName, String empAge, String empSalary) {

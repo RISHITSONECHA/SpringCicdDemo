@@ -14,11 +14,11 @@ public class EmployeeService {
 	@Autowired
 	EmployeeRepo employeeRepo;
 	
-	public List<Employee> getAllEmployees() {
-        return employeeRepo.findAll();
+	public String getAllEmployees() {
+        return "Employee"
     }
 
-    public Employee getEmployeeById(Integer empId) {
+    /*public Employee getEmployeeById(Integer empId) {
         return employeeRepo.findById(empId).orElse(null);
     }
 
@@ -32,5 +32,5 @@ public class EmployeeService {
 
     public void deleteEmployee(Integer empId) {
     	employeeRepo.deleteById(empId);
-    }
+    }*/
 }
