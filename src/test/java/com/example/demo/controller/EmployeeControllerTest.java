@@ -11,7 +11,7 @@ class EmployeeControllerTests {
 	public void hello() {
 		String hello = "hello";
 		assertEquals("hello", hello);
-		assertEquals("1", "1");
+//		assertEquals("1", "1");
 
 	}
 
