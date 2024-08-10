@@ -19,7 +19,8 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'  # Change to your project's Java version
+          distribution: 'zulu'  # You can also use 'zulu', 'adopt', etc.
+          java-version: '17'        # Specify your desired Java version
 
       - name: Build
         run: ./mvnw clean install  # Replace with your build command (e.g., `./gradlew build` for Gradle)
