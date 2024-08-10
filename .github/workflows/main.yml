@@ -1,0 +1,28 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'  # Change to your project's Java version
+
+      - name: Build
+        run: ./mvnw clean install  # Replace with your build command (e.g., `./gradlew build` for Gradle)
+
+      - name: Run Tests
+        run: ./mvnw test  # Replace with your test command (e.g., `./gradlew test` for Gradle)
